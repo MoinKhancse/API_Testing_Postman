@@ -1,0 +1,4 @@
+firstName,lastName,totalprice,depositpaid,checkin,checkout,
+Moin,Khan,1200,TRUE,2024/03/19,2024/03/26,
+Apurbo,Sutrodor,1500,FALSE,2024/03/20,2024/03/25,
+Sakib,Mia,1000,TRUE,2024/03/18,2024/03/24,
