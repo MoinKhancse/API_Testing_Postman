@@ -66,30 +66,26 @@ https://documenter.getpostman.com/view/31254411/2sA35Bbj9D
 ### Request Method: POST
 ### Pre-request Script:
 ```console 
-    var firstName = pm.variables.replaceIn("{{$randomFirstName}}")
-    pm.environment.set("firstName", firstName)
-    console.log("First Name Value "+firstName)
-    
-    var lastName = pm.variables.replaceIn("{{$randomLastName}}")
-    pm.environment.set("lastName", lastName)
-    console.log("Last Name Value "+lastName)
-    
-    var totalPrice = pm.variables.replaceIn("{{$randomInt}}")
-    pm.environment.set("totalPrice", totalPrice)
-    console.log(totalPrice)
-    
-    var depositPaid = pm.variables.replaceIn("{{$randomBoolean}}")
-    pm.environment.set("depositPaid", depositPaid)
-    console.log(depositPaid)
-    
-    //Date
-    const moment = require('moment')
-    const today = moment()
-    pm.environment.set("checkin", today.add(1,'d').format("YYYY-MM-DD"))
-    pm.environment.set("checkout",today.add(5,'d').format("YYYY-MM-DD") )
-    
-    var additionalNeeds = pm.variables.replaceIn("{{$randomNoun}}")
-    pm.environment.set("additionalNeeds", additionalNeeds)
+	var firstName = pm.variables.replaceIn("{{$randomFirstName}}")
+	pm.environment.set("firstName",firstName)
+	
+	var lastName = pm.variables.replaceIn("{{$randomLastName}}")
+	pm.environment.set("lastName",lastName)
+	
+	var totalprice = pm.variables.replaceIn("{{$randomInt}}")
+	pm.environment.set("totalprice",totalprice)
+	
+	var depositpaid = pm.variables.replaceIn("{{$randomBoolean}}")
+	pm.environment.set("depositpaid",depositpaid)
+	
+	const date = require('moment')
+	const today = date()
+	//var cheekin = today.add(5,'d').format("YYYY-MM-DD")
+	var checkin = today.format("YYYY-MM-DD")
+	pm.environment.set("checkin",checkin)
+	//var checkout = today.subtract(5,'d').format("YYYY-MM-DD")
+	var checkout = today.add(3,'d').format("YYYY-MM-DD")
+	pm.environment.set("checkout",checkout)
 ```
   **Request Body:** 
  ```console 
@@ -102,7 +98,7 @@ https://documenter.getpostman.com/view/31254411/2sA35Bbj9D
     	  "checkin" : "{{checkin}}",
     	  "checkout" : "{{checkout}}"
 	  },
-	  "additionalneeds" : "{{additionalNeeds}}"
+	  "additionalneeds" : "Breakfast"
   }
 ```
   **Response Body:**
@@ -118,7 +114,7 @@ https://documenter.getpostman.com/view/31254411/2sA35Bbj9D
               "checkin": "2024-03-15",
               "checkout": "2024-03-20"
           },
-          "additionalneeds": "monitor"
+          "additionalneeds": "Breakfast"
       }
   }
 ```
@@ -136,7 +132,7 @@ https://documenter.getpostman.com/view/31254411/2sA35Bbj9D
         "checkin": "2024-03-15",
         "checkout": "2024-03-20"
     },
-    "additionalneeds": "hard drive"
+    "additionalneeds": "Breakfast"
 }
 ```
 ## _**3. Create A Token For Authentication.**_
@@ -162,30 +158,27 @@ https://documenter.getpostman.com/view/31254411/2sA35Bbj9D
 ### Request Method: PUT
 ### Pre-request Script:
 ```console 
-    var firstName = pm.variables.replaceIn("{{$randomFirstName}}")
-    pm.environment.set("firstName", firstName)
-    console.log("First Name Value "+firstName)
-    
-    var lastName = pm.variables.replaceIn("{{$randomLastName}}")
-    pm.environment.set("lastName", lastName)
-    console.log("Last Name Value "+lastName)
-    
-    var totalPrice = pm.variables.replaceIn("{{$randomInt}}")
-    pm.environment.set("totalPrice", totalPrice)
-    console.log(totalPrice)
-    
-    var depositPaid = pm.variables.replaceIn("{{$randomBoolean}}")
-    pm.environment.set("depositPaid", depositPaid)
-    console.log(depositPaid)
+	var firstName = pm.variables.replaceIn("{{$randomFirstName}}")
+	pm.environment.set("firstName",firstName)
+
+	var lastName = pm.variables.replaceIn("{{$randomLastName}}")
+	pm.environment.set("lastName",lastName)
+	
+	var totalprice = pm.variables.replaceIn("{{$randomInt}}")
+	pm.environment.set("totalprice",totalprice)
+	
+	var depositpaid = pm.variables.replaceIn("{{$randomBoolean}}")
+	pm.environment.set("depositpaid",depositpaid)
     
     //Date
-    const moment = require('moment')
-    const today = moment()
-    pm.environment.set("checkin", today.add(1,'d').format("YYYY-MM-DD"))
-    pm.environment.set("checkout",today.add(5,'d').format("YYYY-MM-DD") )
-    
-    var additionalNeeds = pm.variables.replaceIn("{{$randomNoun}}")
-    pm.environment.set("additionalNeeds", additionalNeeds)
+    	const date = require('moment')
+	const today = date()
+	//var cheekin = today.add(5,'d').format("YYYY-MM-DD")
+	var checkin = today.format("YYYY-MM-DD")
+	pm.environment.set("checkin",checkin)
+	//var checkout = today.subtract(5,'d').format("YYYY-MM-DD")
+	var checkout = today.add(3,'d').format("YYYY-MM-DD")
+	pm.environment.set("checkout",checkout)
 ```
   **Request Body:** 
  ```console 
@@ -198,7 +191,7 @@ https://documenter.getpostman.com/view/31254411/2sA35Bbj9D
     	  "checkin" : "{{checkin}}",
     	  "checkout" : "{{checkout}}"
 	  },
-	  "additionalneeds" : "{{additionalNeeds}}"
+	  "additionalneeds" : "Breakfast"
   }
 ```
   **Response Body:**
