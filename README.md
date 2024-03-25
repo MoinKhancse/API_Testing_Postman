@@ -207,7 +207,7 @@ https://documenter.getpostman.com/view/31254411/2sA35Bbj9D
               "checkin": "2024-03-15",
               "checkout": "2024-03-20"
           },
-          "additionalneeds": "monitor"
+          "additionalneeds": "Breakfast"
       }
   }
 ```
